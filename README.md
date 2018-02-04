@@ -11,9 +11,18 @@ npm install typescript webpack ts-loader uglifyjs-webpack-plugin --save-dev
 ```
 
 ### Step 2: Add webpack watch
-Add the following to package.json:
+Replace the stub scripts section of package.json as follows:
 ```json
   "scripts": {
     "watch": "webpack --watch"
   }
+```
+
+### Step 3: Run your app locally
+```bash
+# Begin webpack compiling on change
+npm run watch
+
+# Serve your index.html, go to http://localhost:2222 in a web browser
+docker run --name create-typescript-webapp -v $(pwd):/usr/share/nginx/html:ro -p 2222:80 -d nginx
 ```
