@@ -21,7 +21,7 @@ git push -u origin master
 ### Step 1: Generate package.json
 ```bash
 npm init -y
-npm install typescript webpack ts-loader uglifyjs-webpack-plugin --save-dev
+npm install typescript webpack webpack-cli ts-loader --save-dev
 ```
 
 ### Step 2: Add webpack watch
