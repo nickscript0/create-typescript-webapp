@@ -23,8 +23,8 @@ git push -u origin master
 npm init -y
 npm install --save-dev typescript webpack webpack-cli ts-loader 
 
-# Optionally install mocha and ts-node for unit tests
-npm install --save-dev ts-node mocha @types/mocha
+# Optionally install mocha, chai, and ts-node for unit tests
+npm install --save-dev ts-node mocha @types/mocha chai @types/chai
 ```
 
 ### Step 2: Add webpack watch
