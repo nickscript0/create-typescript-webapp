@@ -21,14 +21,18 @@ git push -u origin master
 ### Step 1: Generate package.json
 ```bash
 npm init -y
-npm install typescript webpack webpack-cli ts-loader --save-dev
+npm install --save-dev typescript webpack webpack-cli ts-loader 
+
+# Optionally install mocha and ts-node for unit tests
+npm install --save-dev ts-node mocha @types/mocha
 ```
 
 ### Step 2: Add webpack watch
 Replace the stub scripts section of package.json as follows:
 ```json
   "scripts": {
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+     "test": "mocha -r ts-node/register src/test/**.ts" // For unit tests
   }
 ```
 
