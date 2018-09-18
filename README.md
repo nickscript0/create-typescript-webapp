@@ -42,5 +42,5 @@ Replace the stub scripts section of package.json as follows:
 npm run watch
 
 # Serve your index.html, go to http://localhost:2222 in a web browser
-docker run --name create-typescript-webapp -v $(pwd):/usr/share/nginx/html:ro -p 2222:80 -d nginx
+docker run --rm --name create-typescript-webapp -v $(pwd):/usr/share/nginx/html:ro -p 2222:80 -d nginx
 ```
